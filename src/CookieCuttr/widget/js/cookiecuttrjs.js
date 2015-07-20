@@ -1,4 +1,3 @@
-dojo.provide("CookieCuttr.widget.js.cookiecuttrjs");
 /**
  * Copyright (C) 2012 Chris Wharton (chris@weare2ndfloor.com)
  *
@@ -144,9 +143,9 @@ dojo.provide("CookieCuttr.widget.js.cookiecuttrjs");
                 }
             } else if (cookieResetButton) {
                 if (appOrPre) {
-                    $('body').append('<div class="cc-cookies"><a href="#" class="cc-cookie-reset">' + cookieResetButtonText + '</a></div>');
+                    $('body').append('<div class="cc-cookies"><div class="cookie-banner-container"><a href="#" class="cc-cookie-reset">' + cookieResetButtonText + '</a></div></div>');
                 } else {
-                    $('body').prepend('<div class="cc-cookies"><a href="#" class="cc-cookie-reset">' + cookieResetButtonText + '</a></div>');
+                    $('body').prepend('<div class="cc-cookies"><div class="cookie-banner-container"><a href="#" class="cc-cookie-reset">' + cookieResetButtonText + '</a></div></div>');
                 }
             } else {
                 var cookieResetButton = "";
@@ -180,22 +179,22 @@ dojo.provide("CookieCuttr.widget.js.cookiecuttrjs");
                 }
             } else if (cookieAnalytics) { // show analytics overlay
                 if (appOrPre) {
-                    $('body').append('<div class="cc-cookies ' + cookieOverlay + '">' + cookieAnalyticsMessage + cookieAccept + cookieDecline + '<a href="' + cookieWhatAreTheyLink + '" title="Visit All about cookies (External link)">' + cookieWhatAreLinkText + '</a></div>');
+                    $('body').append('<div class="cc-cookies ' + cookieOverlay + '"><div class="cookie-banner-container">' + cookieAnalyticsMessage + cookieAccept + cookieDecline + '<a href="' + cookieWhatAreTheyLink + '" title="Visit All about cookies (External link)">' + cookieWhatAreLinkText + '</a></div></div>');
                 } else {
-                    $('body').prepend('<div class="cc-cookies ' + cookieOverlay + '">' + cookieAnalyticsMessage + cookieAccept + cookieDecline + '<a href="' + cookieWhatAreTheyLink + '" title="Visit All about cookies (External link)">' + cookieWhatAreLinkText + '</a></div>');
+                    $('body').prepend('<div class="cc-cookies ' + cookieOverlay + '"><div class="cookie-banner-container">' + cookieAnalyticsMessage + cookieAccept + cookieDecline + '<a href="' + cookieWhatAreTheyLink + '" title="Visit All about cookies (External link)">' + cookieWhatAreLinkText + '</a></div></div>');
                 }
             }
             if (cookiePolicyPage) { // show policy page overlay
                 if (appOrPre) {
-                    $('body').append('<div class="cc-cookies ' + cookieOverlay + '">' + cookiePolicyPageMessage + " " + ' <a href="#accept" class="cc-cookie-accept">' + cookieAcceptButtonText + '</a> ' + ' <a href="#decline" class="cc-cookie-decline">' + cookieDeclineButtonText + '</a> ' + '</div>');
+                    $('body').append('<div class="cc-cookies ' + cookieOverlay + '"><div class="cookie-banner-container">' + cookiePolicyPageMessage + " " + ' <a href="#accept" class="cc-cookie-accept">' + cookieAcceptButtonText + '</a> ' + ' <a href="#decline" class="cc-cookie-decline">' + cookieDeclineButtonText + '</a> ' + '</div></div>');
                 } else {
-                    $('body').prepend('<div class="cc-cookies ' + cookieOverlay + '">' + cookiePolicyPageMessage + " " + ' <a href="#accept" class="cc-cookie-accept">' + cookieAcceptButtonText + '</a> ' + ' <a href="#decline" class="cc-cookie-decline">' + cookieDeclineButtonText + '</a> ' + '</div>');
+                    $('body').prepend('<div class="cc-cookies ' + cookieOverlay + '"><div class="cookie-banner-container">' + cookiePolicyPageMessage + " " + ' <a href="#accept" class="cc-cookie-accept">' + cookieAcceptButtonText + '</a> ' + ' <a href="#decline" class="cc-cookie-decline">' + cookieDeclineButtonText + '</a> ' + '</div></div>');
                 }
             } else if ((!cookieAnalytics) && (!cookieDiscreetLink)) { // show privacy policy option
                 if (appOrPre) {
-                    $('body').append('<div class="cc-cookies ' + cookieOverlay + '">' + cookieMessage + cookieAccept + cookieDecline + '</div>');
+                    $('body').append('<div class="cc-cookies ' + cookieOverlay + '"><div class="cookie-banner-container">' + cookieMessage + cookieAccept + cookieDecline + '</div></div>');
                 } else {
-                    $('body').prepend('<div class="cc-cookies ' + cookieOverlay + '">' + cookieMessage + cookieAccept + cookieDecline + '</div>');
+                    $('body').prepend('<div class="cc-cookies ' + cookieOverlay + '"><div class="cookie-banner-container">' + cookieMessage + cookieAccept + cookieDecline + '</div></div>');
                 }
             }
         }
@@ -257,7 +256,7 @@ dojo.provide("CookieCuttr.widget.js.cookiecuttrjs");
             }
             $(".cc-cookies").fadeOut(function () {
                 // reload page to activate cookies
-                location.reload();
+//                location.reload();
             });
         });
         //reset cookies
@@ -271,7 +270,7 @@ dojo.provide("CookieCuttr.widget.js.cookiecuttrjs");
             });
             $(".cc-cookies").fadeOut(function () {
                 // reload page to activate cookies
-                location.reload();
+//                location.reload();
             });
         });
         //cookie error accept
@@ -285,7 +284,7 @@ dojo.provide("CookieCuttr.widget.js.cookiecuttrjs");
                 path: '/'
             });
             // reload page to activate cookies
-            location.reload();
+//            location.reload();
         });
     };
 })(jQuery);
